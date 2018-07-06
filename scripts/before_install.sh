@@ -7,7 +7,7 @@ echo "Running ${basename}..."
 # TODO: Can back these files up first if you perfer to do that.
 
 # Shut down node
-node_pid=`ps aux | grep "node index.js" | grep -v "grep" | awk -e '{print $1}'`
+node_pid=`ps aux | grep "node index.js" | grep -v "grep" | awk -e '{print $2}'`
 
 kill $node_pid
 
