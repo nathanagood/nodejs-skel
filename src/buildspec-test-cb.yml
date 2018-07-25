@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo 'Install phase...'
+  pre_build:
+    commands:
+      - echo 'Pre-build phase...'
+      - node --version
+      - npm install express
+      - npm install mocha
+      - npm install supertest
+  build:
+    commands:
+      - echo 'Build phase...'
+      - echo "Build started on `date`"
+      - node_modules/.bin/_mocha -R spec spec.js

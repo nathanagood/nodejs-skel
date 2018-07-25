@@ -1,0 +1,12 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo 'Pre-build phase...'
+      - node --version
+  build:
+    commands:
+      - echo 'Build phase...'
+      - echo "Build started on `date`"
+      - /node_modules/.bin/_mocha -R spec spec.js
